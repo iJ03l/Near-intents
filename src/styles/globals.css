@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Public Sans font */
+html { font-family: 'Public Sans', system-ui, sans-serif; }
+
+/* Neon glow animation */
+@keyframes neon {
+  0%,19%,21%,50%,54%,100% {
+    text-shadow: 0 0 8px #22c55e, 0 0 16px #22c55e;
+  }
+  20%,24%,55% {
+    text-shadow: none;
+  }
+}
+.animate-neon { animation: neon 2s infinite; }
+
+/* Glitch animations */
+@keyframes glitch {
+  0% { transform: translate(0); opacity:1; }
+  20% { transform: translate(-5px,3px) skewX(5deg); opacity:.8; }
+  40% { transform: translate(5px,-3px) skewX(-5deg); }
+  60% { transform: translate(-5px,3px) skewY(5deg); }
+  80% { transform: translate(5px,-3px) skewY(-5deg); }
+  100% { transform: translate(0); opacity:1; }
+}
+.animate-glitch { animation: glitch 2s infinite; }
+@keyframes glitch2 {
+  0% { transform: translate(0); opacity:1; }
+  20% { transform: translate(5px,-3px) skewX(-5deg); opacity:.8; }
+  40% { transform: translate(-5px,3px) skewX(5deg); }
+  60% { transform: translate(5px,-3px) skewY(-5deg); }
+  80% { transform: translate(-5px,3px) skewY(5deg); }
+  100% { transform: translate(0); opacity:1; }
+}
+.animate-glitch2 { animation: glitch2 2s infinite; }
+
+/* Typewriter effect */
+@keyframes typewriter {
+  from { width: 0; } to { width: 100%; }
+}
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #22c55e;
+  animation: typewriter 1.3s steps(30) 1 forwards;
+}
