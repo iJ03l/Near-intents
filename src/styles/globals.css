@@ -46,3 +46,12 @@ html { font-family: 'Public Sans', system-ui, sans-serif; }
   border-right: 4px solid #22c55e;
   animation: typewriter 1.3s steps(30) 1 forwards;
 }
+
+
+.animate-neon-glow { animation: neon 2s infinite; }
+@keyframes neon {
+  0%,19%,21%,50%,54%,100% { text-shadow: 0 0 8px #22c55e, 0 0 16px #22c55e; }
+  20%,24%,55% { text-shadow: none; }
+}
+body { background: linear-gradient(to bottom right, #000, #111); }
+
